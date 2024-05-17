@@ -16,13 +16,13 @@ For the additional step portion, we will also look at wave heights for each hemi
 We will use data queried from the ERA5 Reanalysis Product. A reanalysis is a dataset that combines historical observations (which we trust within the uncertainty of the instrument used to make the measurement, but cannot feasibly cover the entire world) with a physics-based computer model of the earth system (which is not generally as accurate as a measurement, but can at least cover the entire world) to produce consistent global datasets of all variables we are interested in. ERA5 is produced by the European Center for Medium-Range Weather Forecasting (ECMWF), widely regarded as the best forecasting center in the world. Therefore, it is the preferred data product for studying how the Earth's climate has evolved over the past century.
 
 ## Data analysis: Sean_Nakagomi_Climate_Analysis.ipynb
-We first grouped the data by hemispheres: north and south and split the data into test-train sets and identified and isolated the long-term warming trend through SST, by generating a Power Spectral Density as well as creating graphs of the two hemispheres using a 2-year window moving average (median and mean) on the train data. We then quickly Googled the dates associated with the local minimums and maximums to spot any trends such as various active hurricane and typhoon seasons.
+We first grouped the data by hemispheres (north and south), split the data into test-train sets, and identified and isolated the long-term warming trend through SST, by generating a Power Spectral Density as well as creating graphs of the two hemispheres using a 2-year window moving average (median and mean) on the train data. We then quickly Googled the dates associated with the local minimums and maximums to spot any trends such as various active hurricane and typhoon seasons which were annotated in the notebook.
 
-Next, we forecasted these trends just shy of four decades into the future using the Prophet Model and calculated each of their mean absolute errors (MAE) to gauge accuracy.
+Next, we forecast these trends just shy of four decades into the future using the Prophet Model and calculated each of their mean absolute errors (MAE) to gauge accuracy.
 
 For the additional step, we again split the oceans into the two hemispheres like before, but focused on wave-height, and we looked at both the mean and five-number summary for the two hemispheres, comparing them to each other.
 
-We then dove deeper and created a tidy dataframe that included wave-height data for both hemispheres at each date where all included oceans had recorded data and compared the two hemispheres via histogram and a box plot filtered monthly.
+We then dove deeper and created a tidy dataframe that included wave-height data for both hemispheres at each date where all included oceans had recorded data and compared the two hemispheres via a histogram and a box plot filtered monthly.
 
 Lastly, we described the findings obtained in the analysis.
 
